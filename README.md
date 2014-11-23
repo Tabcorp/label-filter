@@ -2,6 +2,13 @@
 
 > Filtering DSL to match a set of labels.
 
+[![NPM](http://img.shields.io/npm/v/filter-labels.svg?style=flat)](https://npmjs.org/package/filter-labels)
+[![License](http://img.shields.io/npm/l/filter-labels.svg?style=flat)](https://github.com/TabDigital/filter-labels)
+
+[![Build Status](http://img.shields.io/travis/TabDigital/filter-labels.svg?style=flat)](http://travis-ci.org/TabDigital/filter-labels)
+[![Dependencies](http://img.shields.io/david/TabDigital/filter-labels.svg?style=flat)](https://david-dm.org/TabDigital/filter-labels)
+[![Dev dependencies](http://img.shields.io/david/dev/TabDigital/filter-labels.svg?style=flat)](https://david-dm.org/TabDigital/filter-labels)
+
 ## Usage
 
 ```js
@@ -41,9 +48,11 @@ This means:
 
 ## Methods
 
+The examples below are based on a filter of `is:integration not:ie8`.
+
 ### `match`
 
-Checks if a set of label matches the entire filter.
+Checks if a set of labels matches the entire filter.
 
 ```js
 filter.match([]) // false
