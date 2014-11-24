@@ -4,7 +4,7 @@
   "description": "Filtering DSL to match a set of labels",
   "author": "Tabcorp Digital Team",
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha"
   },
