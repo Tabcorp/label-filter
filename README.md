@@ -1,18 +1,18 @@
-# filter-labels
+# label-filter
 
 > Filtering DSL to match a set of labels.
 
-[![NPM](http://img.shields.io/npm/v/filter-labels.svg?style=flat)](https://npmjs.org/package/filter-labels)
-[![License](http://img.shields.io/npm/l/filter-labels.svg?style=flat)](https://github.com/TabDigital/filter-labels)
+[![NPM](http://img.shields.io/npm/v/label-filter.svg?style=flat)](https://npmjs.org/package/label-filter)
+[![License](http://img.shields.io/npm/l/label-filter.svg?style=flat)](https://github.com/TabDigital/label-filter)
 
-[![Build Status](http://img.shields.io/travis/TabDigital/filter-labels.svg?style=flat)](http://travis-ci.org/TabDigital/filter-labels)
-[![Dependencies](http://img.shields.io/david/TabDigital/filter-labels.svg?style=flat)](https://david-dm.org/TabDigital/filter-labels)
-[![Dev dependencies](http://img.shields.io/david/dev/TabDigital/filter-labels.svg?style=flat)](https://david-dm.org/TabDigital/filter-labels)
+[![Build Status](http://img.shields.io/travis/TabDigital/label-filter.svg?style=flat)](http://travis-ci.org/TabDigital/label-filter)
+[![Dependencies](http://img.shields.io/david/TabDigital/label-filter.svg?style=flat)](https://david-dm.org/TabDigital/label-filter)
+[![Dev dependencies](http://img.shields.io/david/dev/TabDigital/label-filter.svg?style=flat)](https://david-dm.org/TabDigital/label-filter)
 
 ## Usage
 
 ```js
-var Filter = require('filter-labels');
+var Filter = require('label-filter');
 var filter = new Filter('is:integration not:ie8');
 
 filter.match(['unit']) //false

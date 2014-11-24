@@ -1,5 +1,5 @@
 {
-  "name": "filter-labels",
+  "name": "label-filter",
   "version": "1.0.0",
   "description": "Filtering DSL to match a set of labels",
   "author": "Tabcorp Digital Team",
