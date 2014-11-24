@@ -55,6 +55,8 @@ The examples below are based on a filter of `is:integration not:ie8`.
 Checks if a set of labels matches the entire filter.
 
 ```js
+var filter = new Filter('is:integration not:ie8');
+
 filter.match([]) // false
 filter.match(['unit']) // false
 filter.match(['integration', 'browser']) // true
@@ -66,6 +68,8 @@ filter.match(['integration', 'browser', 'ie8']) // false
 Checks if a set of labels was explicitly included.
 
 ```js
+var filter = new Filter('is:integration not:ie8');
+
 filter.include([]) // false
 filter.include(['unit']) // false
 filter.include(['integration', 'browser']) // true
@@ -77,6 +81,8 @@ filter.include(['integration', 'browser', 'ie8']) // true
 Checks if a set of labels was explicitly excluded.
 
 ```js
+var filter = new Filter('is:integration not:ie8');
+
 filter.exclude([]) // false
 filter.exclude(['unit']) // false
 filter.exclude(['integration', 'browser']) // false
@@ -85,7 +91,7 @@ filter.exclude(['integration', 'browser', 'ie8']) // true
 
 ### `add`
 
-Sometimes you need to update a filter after its creation:
+Adds new conditions to an existing filter.
 
 ```js
 var filter = new Filter('is:integration');
@@ -93,4 +99,26 @@ var filter = new Filter('is:integration');
 if (moment().hours() < 8 || moment().hours() > 18) {
   filter.add('not:backend not:network');
 }
+```
+
+### `remove`
+
+Removes conditions from an existing filter.
+*They have to be an exact string match.*
+
+```js
+var filter = new Filter('is:integration is:unit not:ie8');
+
+if (/*...*/) {
+  filter.remove('is:unit not:ie8');
+}
+```
+
+### `toString`
+
+Prints the filter string.
+
+```js
+var filter = new Filter('is:integration not:ie8');
+filter.toString()  // is:integration not:ie8
 ```
